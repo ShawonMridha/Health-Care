@@ -2,15 +2,20 @@
 import './App.css';
 import { BrowserRouter as Router , Switch, Route} from 'react-router-dom';
 import Header from './Components/Header/Header';
-import Login from './Components/Login/Login';
 import Home from './Components/Home/Home';
 import ServiceData from './Components/ServiceData/ServiceData';
 import Details from './Components/Details/Details';
+import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
+import AuthProvider from './context/AuthProvider';
+
 
 function App() {
   return (
     <div className="App">
-     <Router>
+   
+    <AuthProvider>
+    <Router>
        <Header></Header>
        <Switch>
          <Route exact path="/">
@@ -23,13 +28,17 @@ function App() {
            <ServiceData></ServiceData>
          </Route>
          <Route path="/login">
-           <Login></Login>
+          <Login></Login>
+         </Route>
+         <Route path="/register">
+          <Register></Register>
          </Route>
          <Route path="/details/:id">
            <Details></Details>
          </Route>
        </Switch>
      </Router>
+    </AuthProvider>
     </div>
   );
 }
