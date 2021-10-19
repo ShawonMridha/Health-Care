@@ -1,10 +1,10 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyCSLFEa98Dk_s6JDq3YBxZpZhMJLUumJrY",
+  authDomain: "health-care-service-ec19d.firebaseapp.com",
+  projectId: "health-care-service-ec19d",
+  storageBucket: "health-care-service-ec19d.appspot.com",
+  messagingSenderId: "294332258615",
+  appId: "1:294332258615:web:9d941df8f194f87efc22b2"
+};
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyB5ZPQ1C4v3eZAdXiY51Oe-EswPI-D2t7Y",
-        authDomain: "health-care-faaf4.firebaseapp.com",
-        projectId: "health-care-faaf4",
-        storageBucket: "health-care-faaf4.appspot.com",
-        messagingSenderId: "547487639599",
-        appId: "1:547487639599:web:c8efb98e5b82a2bdc2feda"
-      };
- export default firebaseConfig;
+export default firebaseConfig;
