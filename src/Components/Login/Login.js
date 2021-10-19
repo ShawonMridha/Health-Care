@@ -1,8 +1,9 @@
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
-import { Col, Container, Form, Row } from 'react-bootstrap';
+import {  Col, Container, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import './Login.css'
 
 
 
@@ -43,7 +44,8 @@ const Login = () => {
   
   <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">
     <Col sm={{ span: 10, offset: 2 }}>
-      <Form.Check onChange={toggleLogin} label="Already Registered" />
+      <Form.Check onChange={toggleLogin} label="Already Registerd?" />
+      
     </Col>
   </Form.Group>
 
@@ -56,22 +58,31 @@ const Login = () => {
    <div className="row mb-3 text-danger">{error}</div>
   <Form.Group as={Row} className="mb-3">
     <Col sm={{ span: 10, offset: 2 }}>
-      <Button className="primary" type="submit">{isLogin ? 'Login' : 'Register'}</Button>
+      <Button className="btn btn-success w-25" type="submit">{isLogin ? 'Login' : 'Register'}</Button>
+      <button type="button" onClick={handleResetPassword} className="btn btn-primary w-25">Reset password</button>
     </Col>
-    <button type="button" onClick={handleResetPassword} className="btn btn-primary btn-sm">Reset password</button>
+    
+    
   </Form.Group>
+  
 </Form>
   </Container>
 
             
 
-
+            
+           
+            <Container>
             <div>---------------------------------------</div>
             <br /> <br /> <br />
             <h3>Please Login</h3>
-            <button onClick={signInUsingGoogle}>Google Sign In</button>
+            <button className="btn btn-primary" onClick={signInUsingGoogle}>Google Sign In</button>
             <br />
-            <Link to="/register">New User?</Link>
+            <Link to="/register">New User?</Link> 
+            </Container>
+              
+            
+            
            
         </div>
     );

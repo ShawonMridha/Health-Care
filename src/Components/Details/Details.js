@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
 
 const Details = () => {
@@ -21,10 +22,18 @@ const Details = () => {
     
     return (
         <div>
-            <h3>this is details{id}</h3>
-            <h5>{ExactItem[0]?.service}</h5>
-            <h5>{ExactItem[0]?.description}</h5>
-            <img src={ExactItem[0]?.img} alt="" />
+            <Container className="mt-5">
+              <Row>
+                <Col sm={8}>
+                <img src={ExactItem[0]?.img} alt="" />
+                </Col>
+
+                <Col sm={4}>
+                  <h3>{ExactItem[0]?.service}</h3>
+                  <h5>{ExactItem[0]?.description}</h5>
+                </Col>
+              </Row>
+            </Container>
         </div>
     );
 };

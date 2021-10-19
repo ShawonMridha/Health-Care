@@ -1,17 +1,21 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
 
 const Register = () => {
     return (
-        <div>
-             <form>
-                <input type="email" />
+        <div className="mt-5 mb-5">
+           <Container>
+           <form>
+                <input type="email" placeholder="Email" />
                 <br />
-                <input type="password" />
+                <input type="password" placeholder="password"/>
                 <br />
-                <input type="submit" value="" />
+                <input type="submit" value="Register" />
             </form>
             <Link to="/login">Already registered</Link>
+           </Container>
         </div>
     );
 };

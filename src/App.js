@@ -8,11 +8,17 @@ import Details from './Components/Details/Details';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Footer from './Components/Footer/Footer';
+import NotFound from './Components/NotFound/NotFound';
+import AboutUs from './Components/AboutUs/AboutUs';
+import NurseDetails from './Components/NurseDetails/NurseDetails';
+import Nurse from './Components/Nurse/Nurse';
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
    
     <AuthProvider>
     <Router>
@@ -33,10 +39,20 @@ function App() {
          <Route path="/register">
           <Register></Register>
          </Route>
-         <Route path="/details/:id">
+         <PrivateRoute path="/details/:id">
            <Details></Details>
+         </PrivateRoute>
+         <Route path="/about">
+           <AboutUs></AboutUs>
+         </Route>
+         <Route path="/nurse">
+           <Nurse></Nurse>
+         </Route>
+         <Route path="*">
+           <NotFound></NotFound>
          </Route>
        </Switch>
+       <Footer></Footer>
      </Router>
     </AuthProvider>
     </div>

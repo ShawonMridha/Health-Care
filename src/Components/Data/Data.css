@@ -1,0 +1,15 @@
+.service{
+    width: 600px;
+}
+.center{
+    margin-top: 40px;
+}
+.space{
+    margin-top: 90px;
+    color: red;
+    border-bottom: 4px solid blue;
+}
+.demo{
+    color: blue;
+    margin-top: 50px;
+}
