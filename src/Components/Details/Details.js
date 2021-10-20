@@ -22,14 +22,14 @@ const Details = () => {
     
     return (
         <div>
-            <Container className="mt-5">
+            <Container className="mt-5 mb-5 sm">
               <Row>
                 <Col sm={8}>
                 <img src={ExactItem[0]?.img} alt="" />
                 </Col>
 
                 <Col sm={4}>
-                  <h3>{ExactItem[0]?.service}</h3>
+                  <h3>Service Name: {ExactItem[0]?.service}</h3>
                   <h5>{ExactItem[0]?.description}</h5>
                 </Col>
               </Row>

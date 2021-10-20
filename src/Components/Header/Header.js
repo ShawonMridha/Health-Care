@@ -13,11 +13,11 @@ const Header = () => {
     const {user , logout}= useAuth();
     return (
         <div>
-    <Navbar bg="dark" variant="dark"  sticky="top"  collapseOnSelect expand="lg">
+    <Navbar bg="primary" variant="dark"  sticky="top"  collapseOnSelect expand="lg">
         <Container>
-           <Navbar.Brand href="#home">Health Care</Navbar.Brand>
+           <Navbar.Brand href="#home">Nursing Institute</Navbar.Brand>
            <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
+          <Navbar.Collapse className="justify-content-end color">
              
              <Nav.Link  as={Link} to="/home">Home</Nav.Link>
              <Nav.Link  as={Link} to="/services">Services</Nav.Link>

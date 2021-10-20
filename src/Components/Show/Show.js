@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Button, Card, Col} from 'react-bootstrap';
+import {Card, Col} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Show.css'
 
@@ -20,7 +20,7 @@ const Show = (props) => {
             {description}
           </Card.Text>
           <Link to={`/details/${id}`}>
-        <button className="btn btn-warning size">Details</button>
+        <button className="btn btn-primary size">Details</button>
        
         </Link>
         </Card.Body>
