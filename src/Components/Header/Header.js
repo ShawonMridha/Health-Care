@@ -13,7 +13,7 @@ const Header = () => {
     const {user , logout}= useAuth();
     return (
         <div>
-    <Navbar bg="primary" variant="dark"  sticky="top"  collapseOnSelect expand="lg">
+    <Navbar bg="dark" variant="dark"  sticky="top"  collapseOnSelect expand="lg">
         <Container>
            <Navbar.Brand href="#home">Nursing Institute</Navbar.Brand>
            <Navbar.Toggle />
